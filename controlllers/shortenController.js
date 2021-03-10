@@ -20,7 +20,7 @@ const shortenPostController = (req, res, next) => {
         })
         .catch((err) => res.json(err));
     } else {
-      res.json({ msg: "invalid url" });
+      res.status(400).json({ msg: "invalid url" });
     }
   }
 };
